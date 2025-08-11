@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Фитнес & Здраве — Препоръчани добавки</title>
+<meta name="description" content="Афилиейт препоръки за Shilajit, Moringa и други здравословни и фитнес добавки. Избрани продукти с ревю и директни оферти." />
+<meta name="keywords" content="Shilajit, Moringa, афилиейт, добавки, фитнес, здраве" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Фитнес & Здраве — Препоръчани добавки" />
+<meta property="og:description" content="Афилиейт препоръки за Shilajit, Moringa и други здравословни и фитнес добавки." />
+<meta property="og:image" content="https://source.unsplash.com/1200x630/?herbs,wellness" />
+<meta property="og:url" content="https://твоетоиме.github.io/fitness-products" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Фитнес & Здраве — Препоръчани добавки" />
+<meta name="twitter:description" content="Афилиейт препоръки за Shilajit, Moringa и други здравословни и фитнес добавки." />
+<meta name="twitter:image" content="https://source.unsplash.com/1200x630/?herbs,wellness" />
+
+<!-- Schema.org JSON-LD (Organization + WebSite) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "https://твоетоиме.github.io/fitness-products",
+  "name": "Фитнес & Здраве",
+  "description": "Афилиейт препоръки за Shilajit, Moringa и други здравословни и фитнес добавки."
+}
+</script>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --accent:#27ae60;
+    --accent-2:#e67e22;
+    --bg:#f7faf9;
+    --card:#ffffff;
+    --muted:#6b7280;
+    --maxw:1100px;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+    background:var(--bg);
+    color:#0f1724;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.5;
+  }
+
+  /* Topbar */
+  .topbar{
+    background:linear-gradient(90deg,var(--accent) 0%, #1f8e45 100%);
+    color:#fff;
+    padding:18px 16px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+  }
+  .brand{display:flex;align-items:center;gap:12px}
+  .logo{
+    width:44px;height:44px;border-radius:8px;background:rgba(255,255,255,0.12);
+    display:flex;align-items:center;justify-content:center;font-weight:700;
+  }
+  .brand h1{font-size:1.15rem;margin:0}
+  .lang-switch{background:transparent;border:1px solid rgba(255,255,255,0.15);color:#fff;padding:6px 10px;border-radius:8px;cursor:pointer}
+  .container{max-width:var(--maxw);margin:28px auto;padding:0 16px;}
+
+  /* Hero */
+  .hero{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:18px;
+    align-items:center;
+    margin-bottom:20px;
+  }
+  .hero-card{
+    background:var(--card);
+    border-radius:12px;
+    padding:22px;
+    box-shadow:0 6px 20px rgba(12, 24, 36, 0.06);
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .hero-top{display:flex;gap:16px;align-items:center}
+  .hero-top h2{margin:0;font-size:1.3rem}
+  .hero-top p{margin:0;color:var(--muted)}
+  .cta-row{display:flex;gap:10px;flex-wrap:wrap}
+  .btn{
+    display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;
+  }
+  .btn-primary{background:var(--accent-2);color:#fff}
+  .btn-outline{background:transparent;border:1px solid #e6eef0;color:var(--accent);}
+
+  /* Grid products */
+  .grid{
+    display:grid;
+    gap:18px;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    margin-top:18px;
+  }
+  .card{
+    background:var(--card);
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 6px 18px rgba(12,24,36,0.05);
+    display:flex;
+    flex-direction:column;
+  }
+  .card img{width:100%;height:200px;object-fit:cover;display:block;cursor:pointer}
+  .card-body{padding:14px;display:flex;flex-direction:column;gap:8px}
+  .card h3{margin:0;font-size:1.05rem}
+  .price{color:var(--accent-2);font-weight:700}
+  .desc{color:var(--muted);font-size:0.95rem}
+  .actions{margin-top:10px;display:flex;gap:8px;align-items:center}
+  .affiliate{
+    background:var(--accent);
+    color:#fff;padding:10px 12px;border-radius:8px;text-decoration:none;font-weight:700;
+    box-shadow:0 4px 12px rgba(39,174,96,0.18)
+  }
+  .details{background:transparent;border:1px solid #eef4f3;padding:8px 10px;border-radius:8px;color:var(--muted);text-decoration:none}
+
+  /* FAQ + contact */
+  .two-col{display:grid;grid-template-columns:1fr;gap:18px;margin-top:20px}
+  .faq{background:var(--card);padding:16px;border-radius:12px}
+  .contact{background:var(--card);padding:16px;border-radius:12px}
+  label{display:block;font-size:0.95rem;margin-bottom:6px}
+  input[type="text"],input[type="email"],textarea{
+    width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef0;background:#fff;font-family:inherit;
+  }
+  textarea{min-height:110px;resize:vertical}
+  .muted{color:var(--muted);font-size:0.9rem}
+
+  footer{margin-top:28px;padding:22px 0;text-align:center;color:#fff;background:linear-gradient(90deg,var(--accent) 0%, #1f8e45 100%);border-top-left-radius:12px;border-top-right-radius:12px}
+  .small{font-size:0.85rem;color:rgba(255,255,255,0.9)}
+
+  /* Lightbox modal */
+  .modal{position:fixed;inset:0;background:rgba(2,6,23,0.6);display:none;align-items:center;justify-content:center;padding:20px;z-index:1200}
+  .modal img{max-width:980px;max-height:80vh;border-radius:10px;box-shadow:0 10px 40px rgba(2,6,23,0.6)}
+  .modal.show{display:flex}
+
+  @media(min-width:900px){
+    .hero{grid-template-columns:1fr 420px}
+    .two-col{grid-template-columns:1fr 420px}
+  }
+
+</style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar" role="banner">
+  <div class="brand">
+    <div class="logo" aria-hidden="true">FZ</div>
+    <div>
+      <div style="font-size:0.9rem;opacity:0.95">Фитнес & Здраве</div>
+      <div style="font-size:0.78rem;opacity:0.9">Подбрани продукти | Афилиейт предложения</div>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:10px;align-items:center">
+    <button class="lang-switch" id="langToggle" aria-pressed="false">BG / EN</button>
+  </div>
+</div>
+
+<main class="container" id="main">
+  <!-- Hero -->
+  <section class="hero-card hero" aria-labelledby="hero-title">
+    <div>
+      <div class="hero-top">
+        <div>
+          <h2 id="hero-title">Натурални добавки за енергия и възстановяване</h2>
+          <p id="hero-sub">Shilajit, Moringa и подбрани фитнес добавки — ревюта, ползи и директни оферти.</p>
+        </div>
+      </div>
+
+      <div class="cta-row" style="margin-top:12px">
+        <a class="btn btn-primary" href="#products">Виж продукти</a>
+        <a class="btn btn-outline" href="#faq">Често задавани</a>
+        <a class="btn" href="#contact" style="background:#eef6f2;border-radius:10px">Свържи се с мен</a>
+      </div>
+
+      <p class="muted" style="margin-top:12px">Бележка: Някои връзки са афилиейт — може да получа комисиона без допълнителни разходи за теб.</p>
+    </div>
+
+    <figure style="margin:0">
+      <img src="https://source.unsplash.com/520x420/?wellness,herbs" alt="Wellness products" style="width:100%;height:100%;border-radius:10px;object-fit:cover">
+    </figure>
+  </section>
+
+  <!-- Products -->
+  <section id="products" style="margin-top:6px">
+    <div style="display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:8px">
+      <h2 style="margin:0">Продукти</h2>
+      <p class="muted" style="margin:0">Кликни върху снимката за увеличение • Замени линковете с твоите афилиейт.</p>
+    </div>
+
+    <div class="grid" role="list">
+      <!-- Shilajit -->
+      <article class="card" role="listitem" aria-labelledby="p1-title">
+        <img src="https://source.unsplash.com/800x600/?shilajit,herb" alt="Shilajit" loading="lazy" onclick="openLightbox(this.src)">
+        <div class="card-body">
+          <h3 id="p1-title">Shilajit — Натурална енергия</h3>
+          <div class="desc">Традиционна суперхрана, богата на минерали и фулвокиселини. Подпомага енергията, възстановяването и издръжливостта.</div>
+          <div class="actions">
+            <a class="affiliate" href="YOUR_AFFILIATE_LINK" target="_blank" rel="sponsored noopener noreferrer nofollow">Виж офертата</a>
+            <a class="details" href="#p1" onclick="alert('Описание и честни ревюта ще бъдат тук.');return false">Повече</a>
+            <div style="margin-left:auto;color:var(--muted);font-weight:600">От ~29.99€</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Moringa -->
+      <article class="card" role="listitem" aria-labelledby="p2-title">
+        <img src="https://source.unsplash.com/800x600/?moringa,leaf" alt="Moringa" loading="lazy" onclick="openLightbox(this.src)">
+        <div class="card-body">
+          <h3 id="p2-title">Moringa — Суперхрана</h3>
+          <div class="desc">Богата на витамини и антиоксиданти; подходяща за общо благосъстояние и подкрепа на метаболизма.</div>
+          <div class="actions">
+            <a class="affiliate" href="YOUR_AFFILIATE_LINK" target="_blank" rel="sponsored noopener noreferrer nofollow">Купи сега</a>
+            <a class="details" href="#p2" onclick="alert('Състав, дозировка и честни препоръки.');return false">Повече</a>
+            <div style="margin-left:auto;color:var(--muted);font-weight:600">От ~15.50€</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Protein -->
+      <article class="card" role="listitem" aria-labelledby="p3-title">
+        <img src="https://source.unsplash.com/800x600/?protein,powder" alt="Protein powder" loading="lazy" onclick="openLightbox(this.src)">
+        <div class="card-body">
+          <h3 id="p3-title">Протеинов прах — Възстановяване</h3>
+          <div class="desc">Суроватъчен/веган вариант за мускулна маса и възстановяване след тренировка.</div>
+          <div class="actions">
+            <a class="affiliate" href="YOUR_AFFILIATE_LINK" target="_blank" rel="sponsored noopener noreferrer nofollow">Научи повече</a>
+            <a class="details" href="#p3" onclick="alert('Сравнения и съвети за избор.');return false">Сравни</a>
+            <div style="margin-left:auto;color:var(--muted);font-weight:600">От ~24.00€</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Vitamins -->
+      <article class="card" role="listitem" aria-labelledby="p4-title">
+        <img src="https://source.unsplash.com/800x600/?vitamins,supplements" alt="Vitamins" loading="lazy" onclick="openLightbox(this.src)">
+        <div class="card-body">
+          <h3 id="p4-title">Комплекс витамини</h3>
+          <div class="desc">Мултивитамини за активен начин на живот — енергия, имунитет и възстановяване.</div>
+          <div class="actions">
+            <a class="affiliate" href="YOUR_AFFILIATE_LINK" target="_blank" rel="sponsored noopener noreferrer nofollow">Вземи оферта</a>
+            <a class="details" href="#p4" onclick="alert('Състав и препоръки.');return false">Детайли</a>
+            <div style="margin-left:auto;color:var(--muted);font-weight:600">От ~12.99€</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- FAQ + Contact -->
+  <section class="two-col" style="margin-top:22px">
+    <div class="faq" id="faq">
+      <h3 style="margin-top:0">Често задавани въпроси</h3>
+      <details open>
+        <summary><strong>Какво означава "афилиейт"?</strong></summary>
+        <p class="muted">Афилиейт означава, че при покупка чрез нашия линк мога да получа малка комисиона — това не увеличава цената за теб.</p>
+      </details>
+      <details>
+        <summary><strong>Мога ли да получа директен съвет?</strong></summary>
+        <p class="muted">Не съм медицински специалист. Винаги се консултирай със здравен професионалист преди нова добавка.</p>
+      </details>
+      <details>
+        <summary><strong>Как сменям афилиейт линковете?</strong></summary>
+        <p class="muted">Отвори файла <code>index.html</code> и замени всеки <code>YOUR_AFFILIATE_LINK</code> със своя.</p>
+      </details>
+    </div>
+
+    <aside class="contact" id="contact">
+      <h3>Свържи се с мен</h3>
+      <form id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST" onsubmit="submitted();">
+        <label for="name">Име</label>
+        <input id="name" name="name" type="text" placeholder="Име" required>
+
+        <label for="email">Имейл</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+        <label for="message">Съобщение</label>
+        <textarea id="message" name="message" placeholder="Как мога да помогна?" required></textarea>
+
+        <button type="submit" class="btn btn-primary" style="margin-top:8px">Изпрати</button>
+      </form>
+
+      <p class="muted" style="margin-top:12px">Алтернативно — пиши на: <a href="mailto:your@example.com">your@example.com</a></p>
+    </aside>
+  </section>
+
+  <footer style="margin-top:28px">
+    <div class="small">© <span id="year"></span> Фитнес & Здраве — Съдържанието съдържа афилиейт линкове. Не медицински съвет.</div>
+  </footer>
+</main>
+
+<!-- Lightbox modal -->
+<div id="lightbox" class="modal" role="dialog" aria-modal="true" onclick="closeLightbox(event)">
+  <img id="lb-img" src="" alt="Увеличено изображение">
+</div>
+
+<script>
+  // Basic interactivity: year, lightbox, lang toggle, form stub
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function openLightbox(src){
+    document.getElementById('lb-img').src = src;
+    document.getElementById('lightbox').classList.add('show');
+  }
+  function closeLightbox(e){
+    if(e.target.id === 'lightbox' || e.target.id === 'lb-img') {
+      document.getElementById('lightbox').classList.remove('show');
+    }
+  }
+
+  // Simple BG/EN switch (static translations)
+  const texts = {
+    bg: {
+      title: "Натурални добавки за енергия и възстановяване",
+      subtitle: "Shilajit, Moringa и подбрани фитнес добавки — ревюта, ползи и директни оферти.",
+      products: "Продукти",
+      faq: "Често задавани въпроси",
+      contact: "Свържи се с мен"
+    },
+    en: {
+      title: "Natural supplements for energy & recovery",
+      subtitle: "Shilajit, Moringa and selected fitness supplements — reviews, benefits and direct deals.",
+      products: "Products",
+      faq: "FAQ",
+      contact: "Contact me"
+    }
+  };
+
+  let lang = 'bg';
+  document.getElementById('langToggle').addEventListener('click', function(){
+    lang = (lang === 'bg') ? 'en' : 'bg';
+    this.setAttribute('aria-pressed', lang === 'en');
+    document.getElementById('hero-title').textContent = texts[lang].title;
+    document.getElementById('hero-sub').textContent = texts[lang].subtitle;
+    document.querySelector('section#products h2').textContent = texts[lang].products;
+    document.getElementById('faq').querySelector('h3').textContent = texts[lang].faq;
+    document.getElementById('contact').querySelector('h3').textContent = texts[lang].contact;
+  });
+
+  // Form submission UX (prevent page navigation during demo)
+  function submitted(){
+    // NOTE: Replace action with your real Formspree endpoint. This JS only provides instant feedback.
+    setTimeout(()=> {
+      alert('Благодаря — съобщението е изпратено (демо).');
+    }, 200);
+  }
+
+  // Accessibility: escape closes lightbox
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') document.getElementById('lightbox').classList.remove('show');
+  });
+</script>
+
+<!--
+INSTRUKCII ZA GITHUB PAGES:
+1) Запиши този файл като index.html
+2) Създай ново публично репо в GitHub (пример: fitness-products)
+3) Качи index.html в main branch
+4) Settings -> Pages -> Source: main branch -> Save
+5) След минута ще имаш url: https://<твоетоиме>.github.io/fitness-products
+
+ВАЖНО:
+- Замени YOUR_AFFILIATE_LINK с твоите афилейт URL-та.
+- Добави rel="sponsored noopener noreferrer nofollow" (вече добавено) за по-добри практики.
+- Ако искаш реални снимки, замени Unsplash source със статични URL на твои изображения в същата папка.
+- За контакт формата: регистрирай се в Formspree/Netlify и замени action URL.
+- За GA4/аналитика: сложи скрипта от Google Analytics в head (placeholder).
+-->
+
+</body>
+</html>
